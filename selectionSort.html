@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ordenação por seleção</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        function ordenacaoSelecao(vetor) {
+            let min, aux;
+            for (let i = 0; i < (qtde-1); i++){
+                min = i;
+                for (let j = (i+1); j < qtde; j++) {
+                    if(vetor[j] < vetor[min]) 
+                    min = j;
+                }
+                if (i != min){
+                    aux = vetor[i];
+                    vetor[i] = vetor[min];
+                    vetor[min] = aux;
+                }
+            }
+        }
+        const vetor = [];
+        var vetorOrdenado = [];
+        let qtde = prompt("Quantos números?");
+//var termo = prompt("Digite um número");
+
+        for(let i=0;i<qtde;i++){
+            vetor[i] = prompt("Digite um número");
+        }
+        alert(vetor);
+        for(let i =0;i<qtde;i++){
+            vetorOrdenado[i] = ordenacaoSelecao(vetor[i]);
+        }
+        alert(vetorOrdenado);
+ /*
+        var vetor = [ 90 , 70 , 50 , 80 , 60 , 85 ];
+        var qtde = vetor.length;
+        var novoVetor = [];
+        for(let i=0;i<vetor.length;i++){    
+            document.write(ordenacaoSelecao(vetor)+ ", ");
+        }
+        alert(ordenacaoSelecao(vetor));
+   for ( var i = 0 ; i < scores.length; i++) {
+       // document.write( scores[ i] + "," );
+            novoVetor[i] = scores[i];
+    }
+    document.write("Vetor sem a vírgula<br> " + novoVetor);
+*/
+    </script>
+</body>
+</html>

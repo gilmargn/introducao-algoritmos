@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Concatenando</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        const listaA = [3,5,1,9,6,2,8];
+        alert(listaA);
+        var number = prompt("Digite o número");
+        var posicao = prompt("Digite a posição");
+        listaA.splice(posicao,0,number);
+        alert(listaA);
+        var indice = prompt("Remover por índice")
+        listaA.splice(indice,1);
+        alert("Vetor alterado:  " + listaA);
+       
+        /* for(let i=0;i<=posicao;i++){
+            listaB[i] =listaA[i]; 
+        }
+        alert("Posição:  " + posicao);
+        for(let x=posicao;x>=0;x--){
+            for(let j=0;j<listaA.length;j++){
+                listaC[j] = listaA[x];
+                document.write(x + " -" + j +" --- " + "**** " + listaC[j]);
+            }
+        }
+        listaB.push(number);
+        //alert(listaB.concat(listaC));
+        alert(listaB + "--" + listaC);
+        var qtde = listaB.length + listaC.length;
+        
+        alert(qtde);
+        //alert(aux); */
+    </script>
+    
+</body>
+</html>
