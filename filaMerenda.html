@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>fila</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+ 
+</head>
+<body>
+    <script>
+        const fila = [];
+
+        function tamanhoFila(fila){
+            var tamanho = fila.length;
+                if(tamanho==0)          
+                    alert("fila vazia")
+                else if(tamanho>40)
+                    alert("fila cheia");
+                else
+                    alert ("A fila já possui estudantes");
+       return tamanho;
+        }
+
+        function addFila(fila){
+            let matricula = prompt("Digite sua matrícula");
+            fila.push(matricula);
+        return fila;
+        }
+
+        function mostrarFila(fila){
+            alert(fila);
+        return fila;
+        }
+        function removerFila(fila){
+            fila.shift(fila);
+        return fila;
+        }
+        function sairFila(fila){
+            return fila;
+        }
+
+    do{
+        var op = prompt("Digite uma opção:\n 0. tamanho da fila\n 1. inserir\n 2.Mostrar fila\n 3. remover\n -1. Para sair")
+        switch(op){
+            case '0': alert(tamanhoFila(fila));break;
+            case '1': alert(addFila(fila)); break;             
+            case '2': alert(mostrarFila(fila));break;
+            case '3': alert(removerFila(fila));break;
+            case '-1': alert("Tchau");break;
+            default: alert("Opção inválida");
+        }     
+    }while(op!='-1');
+
+    //myalert("Tchau")
+        
+    </script>
+</body>
+</html>

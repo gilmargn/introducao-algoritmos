@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>lista</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>
+        const lista = []
+        //const auxLista = []
+        
+        function tamanhoLista(lista){
+            return lista.length;
+        }
+        function addInicioLista(lista){
+            let number = prompt("Digite um número");
+            lista.unshift(number);
+            return("Inserido no início")
+        }
+        function addFimLista(lista){
+            let number = prompt("Digite um número");
+            lista.push(number);
+            return("Inserido no fim");
+        }
+        function addAleatorioLista(lista){
+            let posicao = prompt("digite a posição");
+            let number = prompt("digite o número ");
+            lista.splice(posicao,0,number);
+        return("Adicionado por índice");   
+        }
+        function removerInicioLista(lista){
+            lista.shift();
+        return("Removido do início")
+        }
+        function removerFimLista(lista){
+            lista.pop();
+        return("Removido do fim")
+        }
+        function removerAleatorioLista(lista){
+            let posicao = prompt("Digite a posição");
+            lista.splice(posicao,1);
+        return(lista);
+        }
+        function removerValor(lista){
+            let valor = prompt("Digite um número");
+            for( var i = 0; i < lista.length; i++){ 
+                if ( lista[i] === valor) { 
+                    lista.splice(i, 1); 
+                    i--;
+            }
+
+        }
+        return("Removido por valor");
+        }
+        function mostrarLista(lista){
+            return lista;
+        }
+
+
+    do{
+        var op = prompt("Digite uma opção:\n0. Quantidade de itens\n 1. inserir no início\n 2.Inserir no fim\n 3.Inserir aleatório\n 4.Remover no início\n 5.Remover no fim\n 6.Remover aleatório\n 7.Remover valor\nMostrar lista\n -1 Para sair");
+        switch(op){
+            case '0': alert(tamanhoLista(lista));break;
+            case '1': alert(addInicioLista(lista)); break;             
+            case '2': alert(addFimLista(lista));break;
+            case '3': alert(addAleatorioLista(lista));break;
+            case '4': alert(removerInicioLista(lista));break;
+            case '5': alert(removerFimLista(lista));break;
+            case '6': alert(removerAleatorioLista(lista));break;
+            case '7': alert(removerValor(lista));break;
+            case '8': alert(mostrarLista(lista));break;
+            default: alert("Opção inválida");
+        }     
+    }while(op!='-1');
+        
+    </script>
+</body>
+</html>

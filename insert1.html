@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ordenação por inserção</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <script>        
+    class InsertSort{
+        static sort( arrays) {
+            for ( var i = 0 ; i < arrays.length; i++) {
+                var insertElement = arrays[ i]; //Take unsorted new elements
+                var insertPosition = i; //Inserted position
+                for ( var j = insertPosition - 1 ; j >= 0 ; j--) {
+                    //If the new element is smaller than the sorted element, shifted to the right
+                    if ( insertElement < arrays[ j]) {
+                        arrays[ j + 1 ] = arrays[ j];
+                        insertPosition--;
+                    }
+                }
+                arrays[ insertPosition] = insertElement; //Insert the new element
+            }
+        }
+    }
+    //////////////////////testing////////////////////
+    var scores = [ 90 , 70 , 50 , 80 , 60 , 85 ];
+    var novoVetor = [];
+    InsertSort.sort( scores);
+    for ( var i = 0 ; i < scores.length; i++) {
+       // document.write( scores[ i] + "," );
+            novoVetor[i] = scores[i];
+    }
+    document.write("Vetor sem a vírgula<br> " + novoVetor);
+</script>
+</body>
+</html>
