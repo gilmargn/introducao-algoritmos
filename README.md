@@ -1,0 +1,1 @@
+Algoritmos básicos de revisão envolvendo laços de repetição e outros fundamentos básicos em Javascript
